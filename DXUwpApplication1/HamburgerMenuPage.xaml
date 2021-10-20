@@ -15,14 +15,24 @@
             </Layout:HamburgerMenuNavigationButton.Icon>
         </Layout:HamburgerMenuNavigationButton>
         <Layout:HamburgerMenuNavigationButton Content="Selection A Personal Details" NavigationTargetType="local:SelectionAPersonalDetails" >
-            <Layout:HamburgerMenuNavigationButton.Icon>
-                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7C3;" />
-            </Layout:HamburgerMenuNavigationButton.Icon>
+            <Layout:HamburgerMenuNavigationButton.IconTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="" FontSize="0" HorizontalAlignment="Center"/>
+                        <TextBlock FontSize="20" HorizontalAlignment="Center">A</TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </Layout:HamburgerMenuNavigationButton.IconTemplate>
         </Layout:HamburgerMenuNavigationButton>
         <Layout:HamburgerMenuNavigationButton Content="Selection B Financial Summary" NavigationTargetType="local:SelectionBFinancialSummary" >
-            <Layout:HamburgerMenuNavigationButton.Icon>
-                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7C3;" />
-            </Layout:HamburgerMenuNavigationButton.Icon>
+            <Layout:HamburgerMenuNavigationButton.IconTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="" FontSize="0" HorizontalAlignment="Center"/>
+                        <TextBlock FontSize="20" HorizontalAlignment="Center">B</TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </Layout:HamburgerMenuNavigationButton.IconTemplate>
         </Layout:HamburgerMenuNavigationButton>
         <Layout:HamburgerMenuNavigationButton Content="Database" NavigationTargetType="local:Database" Placement="Bottom">
             <Layout:HamburgerMenuNavigationButton.Icon>

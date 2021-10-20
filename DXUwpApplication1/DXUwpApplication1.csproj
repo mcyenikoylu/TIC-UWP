@@ -157,9 +157,12 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="Documents\temp.docx" />
     <None Include="DXUwpApplication1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Documents\logo-1.png" />
+    <Content Include="Images\logo-3.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

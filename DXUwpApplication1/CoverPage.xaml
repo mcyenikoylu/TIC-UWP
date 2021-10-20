@@ -6,11 +6,81 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Layout="using:DevExpress.UI.Xaml.Layout"
+    xmlns:my="using:DevExpress.UI.Xaml.Editors"
     mc:Ignorable="d">
 
     <!-- The PageAdornerControl displays the back button and a page title. -->
     <Layout:PageAdornerControl Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Header="CoverPage">
         <Grid>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <ScrollViewer>
+                        <Grid HorizontalAlignment="Center">
+
+                            <Image Source="Images/logo-3.png" Width="258" Height="68" Stretch="None" HorizontalAlignment="Center"
+        VerticalAlignment="Top" />
+
+                            <TextBlock HorizontalAlignment="Left" Margin="0,112,0,0" Text="Prepared for:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <TextBox x:Name="txtPreparedFor" HorizontalAlignment="Left" Margin="0,136,0,0" VerticalAlignment="Top" Width="308"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="0,182,0,0" Text="Your Adviser:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <TextBox x:Name="txtYourAdviser" HorizontalAlignment="Left" Margin="0,206,0,0" VerticalAlignment="Top" Width="308"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="0,252,0,0" Text="Date:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <my:DateEdit  x:Name="dataPicket1" xml:lang="en-US" Language="en-US" Margin="0,281,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="308" IsTabStop="False" />
+                        </Grid>
+                    </ScrollViewer>
+                </Grid>
+                <Grid Grid.Row="1" Margin="20 0 20 20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+
+                        <Button x:Name="CoverPageFileNotesSave" HorizontalAlignment="Right" VerticalAlignment="Center" Click="CoverPageFileNotesSave_Click">
+                            <StackPanel>
+                                <FontIcon HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Glyph="&#xE74E;"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="btnCoverPageNew" HorizontalAlignment="Right" Margin="0 0 50 0" VerticalAlignment="Center" Click="BtnCoverPageNew_Click">
+                            <StackPanel>
+                                <FontIcon HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Glyph="&#xF164;"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="btnCoverPagePDF" HorizontalAlignment="Right" Margin="0 0 100 0" VerticalAlignment="Center" Click="BtnCoverPagePDF_Click">
+                            <StackPanel>
+                                <FontIcon HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Glyph="&#xE72D;"/>
+                            </StackPanel>
+                        </Button>
+
+                        <ProgressRing x:Name="LoadingIndicator" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 150 0" />
+
+                        <TextBlock HorizontalAlignment="Left" Margin="10 0 0 0" Text="File Notes" TextWrapping="Wrap" VerticalAlignment="Center"/>
+
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <InkToolbar x:Name="inkToolbar" TargetInkCanvas="{x:Bind myInkCanvas}" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Grid.Row="2" BorderThickness="1 1 1 1" BorderBrush="Silver">
+                        <ScrollViewer>
+                            <Grid>
+                                <InkCanvas x:Name="myInkCanvas" Height="500">
+
+                                </InkCanvas>
+                            </Grid>
+                        </ScrollViewer>
+                    </Grid>
+
+
+                </Grid>
+            </Grid>
+
         </Grid>
     </Layout:PageAdornerControl>
 </Layout:DXPage>
