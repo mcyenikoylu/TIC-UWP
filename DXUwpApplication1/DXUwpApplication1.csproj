@@ -92,9 +92,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <PackageReference Include="DocX">
-      <Version>1.8.0</Version>
-    </PackageReference>
     <PackageReference Include="Microsoft.Data.Sqlite">
       <Version>5.0.11</Version>
     </PackageReference>
@@ -124,6 +121,7 @@
     <Compile Include="CoverPage.xaml.cs">
       <DependentUpon>CoverPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess.cs" />
     <Compile Include="Database.xaml.cs">
       <DependentUpon>Database.xaml</DependentUpon>
     </Compile>
@@ -135,6 +133,9 @@
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageViewer.xaml.cs">
+      <DependentUpon>PageViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageWithHeader.xaml.cs">
       <DependentUpon>PageWithHeader.xaml</DependentUpon>
@@ -157,11 +158,15 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="Documents\temp.docx" />
+    <Content Include="Documents\temp.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="DXUwpApplication1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Documents\logo-1.png" />
+    <Content Include="Documents\logo-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\logo-3.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -200,6 +205,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageWithHeader.xaml">
       <SubType>Designer</SubType>

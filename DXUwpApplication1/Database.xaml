@@ -6,11 +6,68 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Layout="using:DevExpress.UI.Xaml.Layout"
+    xmlns:Custom="using:DevExpress.UI.Xaml.Grid"
     mc:Ignorable="d">
 
     <!-- The PageAdornerControl displays the back button and a page title. -->
     <Layout:PageAdornerControl Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Header="Database">
         <Grid>
+            <SplitView IsPaneOpen="True" DisplayMode="Inline">
+                <SplitView.Pane>
+                    <Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition MinHeight="20" Height="Auto"></RowDefinition>
+                                <RowDefinition MinHeight="20" Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock x:Name="databasetype" Grid.Row="0" Text="Database Type: SQLite3" Margin="10" TextWrapping="Wrap" />
+                            <TextBlock x:Name="databasepath" Grid.Row="1" Text="Database Path:" Margin="10" TextWrapping="Wrap" />
+                        </Grid>
+                        <Grid>
+                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="Blue" Foreground="White" Content="Open Folder" Click="Button_Click" />
+                        </Grid>
+                    </Grid>
+
+                </SplitView.Pane>
+                <Grid VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="150"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="150"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="150"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+
+                    <Border Grid.Row="0" BorderThickness="1 1 1 1" Background="Gray" Padding="6" VerticalAlignment="Top">
+                        <TextBlock Padding="3" Foreground="White" FontSize="16">Cover Page</TextBlock>
+
+                    </Border>
+
+                    <Custom:GridControl x:Name="grdDatabase" Grid.Row="1" ItemsSource="{Binding Data}" 
+                                        AutoGenerateColumns="True" ShowColumnHeaders="True" AutoWidth="False" VerticalAlignment="Top">
+                    </Custom:GridControl>
+
+                    <Border Grid.Row="2" BorderThickness="1 1 1 1" Background="Gray" Padding="6" VerticalAlignment="Top">
+                        <TextBlock Padding="3" Foreground="White" FontSize="16">Selection A - Personal Details</TextBlock>
+                    </Border>
+
+                    <Custom:GridControl x:Name="grdDatabase2" Grid.Row="3" ItemsSource="{Binding Data2}" 
+                                        AutoGenerateColumns="True" ShowColumnHeaders="True" AutoWidth="False" VerticalAlignment="Top">
+                    </Custom:GridControl>
+
+                    <Border Grid.Row="4" BorderThickness="1 1 1 1" Background="Gray" Padding="6" VerticalAlignment="Top">
+                        <TextBlock Padding="3" Foreground="White" FontSize="16">Selection B - Financial Summary</TextBlock>
+                    </Border>
+
+                    <Custom:GridControl x:Name="grdDatabase3" Grid.Row="5" ItemsSource="{Binding Data3}" 
+                                        AutoGenerateColumns="True" VerticalAlignment="Top" AutoWidth="False" ShowColumnHeaders="True">
+                    </Custom:GridControl>
+
+                </Grid>
+            </SplitView>
+
         </Grid>
     </Layout:PageAdornerControl>
 </Layout:DXPage>

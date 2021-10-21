@@ -1,0 +1,19 @@
+﻿<!-- DXPage can be used on its own or navigated to. -->
+<Layout:DXPage
+    x:Class="DXUwpApplication1.PageViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Layout="using:DevExpress.UI.Xaml.Layout"
+    xmlns:Controls="using:DevExpress.UI.Xaml.Controls"
+    mc:Ignorable="d">
+
+    <!-- The PageAdornerControl displays the back button and a page title. -->
+    <Layout:PageAdornerControl Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Header="PageViewer">
+        <Grid>
+            <Controls:PdfViewerControl x:Name="pdfViewer" Loaded="PdfViewer_Loaded" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+
+        </Grid>
+    </Layout:PageAdornerControl>
+</Layout:DXPage>

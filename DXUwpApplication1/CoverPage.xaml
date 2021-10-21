@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Layout="using:DevExpress.UI.Xaml.Layout"
-    xmlns:my="using:DevExpress.UI.Xaml.Editors"
+    xmlns:Editors="using:DevExpress.UI.Xaml.Editors"
     mc:Ignorable="d">
 
     <!-- The PageAdornerControl displays the back button and a page title. -->
@@ -29,7 +29,11 @@
                             <TextBlock HorizontalAlignment="Left" Margin="0,182,0,0" Text="Your Adviser:" TextWrapping="Wrap" VerticalAlignment="Top"/>
                             <TextBox x:Name="txtYourAdviser" HorizontalAlignment="Left" Margin="0,206,0,0" VerticalAlignment="Top" Width="308"/>
                             <TextBlock HorizontalAlignment="Left" Margin="0,252,0,0" Text="Date:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                            <my:DateEdit  x:Name="dataPicket1" xml:lang="en-US" Language="en-US" Margin="0,281,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="308" IsTabStop="False" />
+                            <Editors:DateEdit  x:Name="dataPicket1" xml:lang="en-US" Language="en-US" DisplayFormatString="dd/MM/yyyy" Margin="0,281,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="308" IsTabStop="False" >
+                                <Editors:DateEdit.TextInputSettings>
+                                    <Editors:TextInputMaskSettings Mask="dd/MM/yyyy" MaskType="DateTime" UseAsDisplayFormat="False"/>
+                                </Editors:DateEdit.TextInputSettings>
+                            </Editors:DateEdit>
                         </Grid>
                     </ScrollViewer>
                 </Grid>

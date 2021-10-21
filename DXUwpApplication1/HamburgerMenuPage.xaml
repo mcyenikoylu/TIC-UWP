@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Layout:HamburgerMenu Header="Menu Header" WindowTitle="Hamburger Menu" HideMenuWhenActivePageItemNotFound="True">
-        <Layout:HamburgerMenuNavigationButton Content="CoverPage" NavigationTargetType="local:MainPage" >
+        <Layout:HamburgerMenuNavigationButton Content="CoverPage" NavigationTargetType="local:CoverPage" >
             <Layout:HamburgerMenuNavigationButton.Icon>
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7C3;" />
             </Layout:HamburgerMenuNavigationButton.Icon>
