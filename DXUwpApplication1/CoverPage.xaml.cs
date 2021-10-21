@@ -225,7 +225,7 @@ namespace DXUwpApplication1
 
                         if (DateOfBirth_Client1 != Convert.ToDateTime("1900-01-01"))
                         {
-                            string[] d = DateOfBirth_Client1.ToShortDateString().Split('-');
+                            string[] d = DateOfBirth_Client1.ToShortDateString().Split('/');
                             string dd = d[0];
                             string mm = d[1];
                             string yyyy = d[2];
@@ -254,7 +254,7 @@ namespace DXUwpApplication1
 
                         if (DateOfBirth_Client2 != Convert.ToDateTime("1900-01-01"))
                         {
-                            string[] d = DateOfBirth_Client2.ToShortDateString().Split('-');
+                            string[] d = DateOfBirth_Client2.ToShortDateString().Split('/');
                             string dd = d[0];
                             string mm = d[1];
                             string yyyy = d[2];
@@ -798,7 +798,7 @@ namespace DXUwpApplication1
 
                         if (DateOfBirth_Dependant1 != Convert.ToDateTime("1900-01-01"))
                         {
-                            string[] d = DateOfBirth_Dependant1.ToShortDateString().Split('-');
+                            string[] d = DateOfBirth_Dependant1.ToShortDateString().Split('/');
                             string dd = d[0];
                             string mm = d[1];
                             string yyyy = d[2];
@@ -827,7 +827,7 @@ namespace DXUwpApplication1
 
                         if (DateOfBirth_Dependant2 != Convert.ToDateTime("1900-01-01"))
                         {
-                            string[] d = DateOfBirth_Dependant2.ToShortDateString().Split('-');
+                            string[] d = DateOfBirth_Dependant2.ToShortDateString().Split('/');
                             string dd = d[0];
                             string mm = d[1];
                             string yyyy = d[2];
@@ -856,7 +856,7 @@ namespace DXUwpApplication1
 
                         if (DateOfBirth_Dependant2 != Convert.ToDateTime("1900-01-01"))
                         {
-                            string[] d = DateOfBirth_Dependant2.ToShortDateString().Split('-');
+                            string[] d = DateOfBirth_Dependant2.ToShortDateString().Split('/');
                             string dd = d[0];
                             string mm = d[1];
                             string yyyy = d[2];

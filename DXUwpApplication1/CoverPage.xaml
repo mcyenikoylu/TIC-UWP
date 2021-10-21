@@ -10,7 +10,7 @@
     mc:Ignorable="d">
 
     <!-- The PageAdornerControl displays the back button and a page title. -->
-    <Layout:PageAdornerControl Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Header="CoverPage">
+    <Layout:PageAdornerControl Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Header="Cover Page">
         <Grid>
             <Grid >
                 <Grid.RowDefinitions>
