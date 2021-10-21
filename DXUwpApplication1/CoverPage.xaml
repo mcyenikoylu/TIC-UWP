@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Layout="using:DevExpress.UI.Xaml.Layout"
     xmlns:Editors="using:DevExpress.UI.Xaml.Editors"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Loaded="DXPage_Loaded">
 
     <!-- The PageAdornerControl displays the back button and a page title. -->
     <Layout:PageAdornerControl Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Header="Cover Page">

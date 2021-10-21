@@ -1827,5 +1827,21 @@ namespace DXUwpApplication1
             }
         }
 
+        private void DXPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if(DataAccess._CoverPageID > 0)
+            {
+                DataTable dt = DataAccess.getCoverPageData(DataAccess._CoverPageID);
+                if (dt.Rows.Count > 0)
+                {
+                    DateTime dDated = new DateTime();
+                    dDated = Convert.ToDateTime(dt.Rows[0].ItemArray[3].ToString());
+
+                    txtPreparedFor.Text = dt.Rows[0].ItemArray[1].ToString();
+                    txtYourAdviser.Text = dt.Rows[0].ItemArray[2].ToString();
+                    dataPicket1.EditValue = dDated;
+                }
+            }
+        }
     }
 }
