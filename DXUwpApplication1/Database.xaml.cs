@@ -29,7 +29,6 @@ namespace DXUwpApplication1
             public ICollectionView Data2 { get; set; }
             public ICollectionView Data3 { get; set; }
 
-
             public DataModel()
             {
                 Data = new CollectionViewSource
@@ -1588,5 +1587,9 @@ namespace DXUwpApplication1
             return list;
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

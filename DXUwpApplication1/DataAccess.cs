@@ -2429,7 +2429,7 @@ namespace DXUwpApplication1
             connstr.Open();
             SqliteCommand cmd = new SqliteCommand();
             cmd.Connection = connstr;
-            cmd.CommandText = "select ID,PreparedFor,YourAdviser,DateValue,FileNotes_FileName,FileNotes_FilePath from CoverPage where ID = " + coverPageID.ToString();
+            cmd.CommandText = "select * from CoverPage where ID = " + coverPageID.ToString();
             SqliteDataReader rdr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(rdr);

@@ -24,6 +24,9 @@
                             <TextBlock x:Name="databasepath" Grid.Row="1" Text="Database Path:" Margin="10" TextWrapping="Wrap" />
                         </Grid>
                         <Grid>
+                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="0 0 0 30" Visibility="Collapsed" Background="Blue" Foreground="White" Content="Load Data" Click="Button_Click_1" />
+                        </Grid>
+                        <Grid>
                             <Button HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="Blue" Foreground="White" Content="Open Folder" Click="Button_Click" />
                         </Grid>
                     </Grid>
@@ -45,7 +48,7 @@
 
                     </Border>
 
-                    <Custom:GridControl x:Name="grdDatabase" Grid.Row="1" ItemsSource="{Binding Data}" 
+                    <Custom:GridControl x:Name="grdDatabase" Grid.Row="1" ItemsSource="{Binding Data}"  
                                         AutoGenerateColumns="True" ShowColumnHeaders="True" AutoWidth="False" VerticalAlignment="Top">
                     </Custom:GridControl>
 
@@ -53,7 +56,7 @@
                         <TextBlock Padding="3" Foreground="White" FontSize="16">Selection A - Personal Details</TextBlock>
                     </Border>
 
-                    <Custom:GridControl x:Name="grdDatabase2" Grid.Row="3" ItemsSource="{Binding Data2}" 
+                    <Custom:GridControl x:Name="grdDatabase2" Grid.Row="3" ItemsSource="{Binding Data2}"  
                                         AutoGenerateColumns="True" ShowColumnHeaders="True" AutoWidth="False" VerticalAlignment="Top">
                     </Custom:GridControl>
 
@@ -61,7 +64,7 @@
                         <TextBlock Padding="3" Foreground="White" FontSize="16">Selection B - Financial Summary</TextBlock>
                     </Border>
 
-                    <Custom:GridControl x:Name="grdDatabase3" Grid.Row="5" ItemsSource="{Binding Data3}" 
+                    <Custom:GridControl x:Name="grdDatabase3" Grid.Row="5" ItemsSource="{Binding Data3}"  
                                         AutoGenerateColumns="True" VerticalAlignment="Top" AutoWidth="False" ShowColumnHeaders="True">
                     </Custom:GridControl>
 
